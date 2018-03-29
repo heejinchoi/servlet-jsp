@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="testGet" method="get">
+	<fieldset>
+		<legend>실습폼  - 1</legend>
+		<ul>
+			<li>
+				<label for="id">아이디</label>
+				<input type="text" id="userId" name="userId" required placeholder="아이디를 입력하세요.">
+			</li>
+			<br>
+			<li>
+				<label for="password">비밀번호</label>
+				<input type="text" id="password" name="password" >
+			</li>
+		</ul>
+	</fieldset>
+	<fieldset>
+		<legend>실습폼 - 2</legend>
+		<ul>
+			<li>
+				<label for="checkbox">체크박스</label><br>
+				<input type="checkbox" id="hobby" name="hobby" value="독서">독서<br>
+				<input type="checkbox" id="hobby" name="hobby" value="영화">영화<br>
+				<input type="checkbox" id="hobby" name="hobby" value="음악">음악<br>
+				<input type="checkbox" id="hobby" name="hobby" value="그림">그림<br>
+				<input type="checkbox" id="hobby" name="hobby" value="운동">운동<br>
+			</li>
+			<br>
+			<li>
+				<label for="radio">사용여부</label><br>
+				<input type="radio" id="useYn" name="useYn" value="사용" checked="checked">사용<br>
+				<input type="radio" id="useYn" name="useYn" value="미사용">미사용<br>
+			</li>
+		</ul>
+	</fieldset>
+	<div>
+		<input type="submit" value="전송" style="margin-left: 100px; margin-top: 20px;">
+	</div>
+</form>
+
+</body>
+</html>
