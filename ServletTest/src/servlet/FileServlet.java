@@ -1,4 +1,4 @@
-package com.gaia3d.test;
+package servlet;
 
 import java.io.BufferedReader;
 import java.io.IOException;

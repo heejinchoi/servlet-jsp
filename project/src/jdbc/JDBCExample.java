@@ -1,4 +1,4 @@
-package controller;
+package jdbc;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

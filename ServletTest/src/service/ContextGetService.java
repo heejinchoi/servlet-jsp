@@ -1,4 +1,4 @@
-package com.gaia3d.test;
+package service;
 
 import java.io.IOException;
 import java.io.PrintWriter;
