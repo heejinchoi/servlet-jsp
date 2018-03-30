@@ -16,17 +16,15 @@ import javax.servlet.http.HttpServletResponse;
 public class PostgresqlJDBC extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Connection c = null;
+		Connection con = null;
 	    Statement stmt = null;
 	      try {
 	         Class.forName("org.postgresql.Driver");
-	         c = DriverManager
-	            .getConnection("jdbc:postgresql://localhost:5432/project",
-	            "postgres", "postgres");
-	         c.setAutoCommit(false);
+	         con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project","postgres", "postgres");
+	         con.setAutoCommit(false);
 	         System.out.println("Opened database successfully");
 
-	         stmt = c.createStatement();
+	         stmt = con.createStatement();
 	         ResultSet rs = stmt.executeQuery( "SELECT * FROM Project;" );
 	         while ( rs.next() ) {
 	            String userId = rs.getString("user_id");
@@ -45,16 +43,14 @@ public class PostgresqlJDBC extends HttpServlet {
 	         }
 	         rs.close();
 	         stmt.close();
-	         c.close();
+	         con.close();
 	      } catch ( Exception e ) {
 	         System.err.println( e.getClass().getName()+": "+ e.getMessage() );
-	         System.exit(0);
 	      }
 	      System.out.println("Operation done successfully");
 	   }
 	
 	
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	
