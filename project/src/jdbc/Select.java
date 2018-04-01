@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/db")
-public class PostgresqlJDBC extends HttpServlet {
+@WebServlet("/jdbc/select")
+public class Select extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection con = null;
@@ -25,7 +25,7 @@ public class PostgresqlJDBC extends HttpServlet {
 	         System.out.println("Opened database successfully");
 
 	         stmt = con.createStatement();
-	         ResultSet rs = stmt.executeQuery( "SELECT * FROM Project;" );
+	         ResultSet rs = stmt.executeQuery( "SELECT * FROM user_info1;" );
 	         while ( rs.next() ) {
 	            String userId = rs.getString("user_id");
 	            String  password = rs.getString("password");
